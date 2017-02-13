@@ -1,0 +1,169 @@
+body {
+    background-color: #f5f5f5;
+}
+
+main {
+    padding: 0 0 0 300px;
+}
+
+.content.container {
+    width: 100%;
+    max-width: none;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    /*align-items: center;*/
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.content {
+    min-width: 320px;
+}
+
+.title{
+    
+    text-align: center;
+}
+
+a {
+    color: #e91e63;
+}
+
+.nav-wrapper {
+    padding-left: 320px;
+}
+
+nav .brand-logo {
+    font-size: 1.4rem;
+}
+
+.side-nav a.brand-logo {
+    height: 148px;
+    border-bottom: 2px solid #bdbdbd;
+    text-align: center;
+}
+
+.side-nav a.brand-logo img {
+    height: 100px;
+    width: auto;
+}
+
+.side-nav li > a.brand-logo > i {
+    float: none;
+    display: inline-block;
+    line-height: 118px;
+    font-size: 8rem;
+    width: 100%;
+    margin: 0;
+}
+
+table.full-width tbody {
+    background: #fff;
+}
+
+td, th {
+    padding: 15px 5px 15px 15px;
+}
+
+table.full-width .border-top {
+    border-top: 1px solid #d0d0d0;
+}
+
+table.full-width .actions {
+    text-align: right;
+}
+
+.modal .modal-footer .btn, 
+.modal .modal-footer .btn-large, 
+.modal .modal-footer .btn-flat {
+    float: none;
+}
+
+.flex-center .card {
+    width: 98%;
+    margin-top: 50px;
+}
+
+.card .card-action {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-header {
+    padding: 20px;
+    background-color: #546e7a;
+    color: #fff;
+    font-size: 22px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+@media only screen and (min-width: 1170px) {
+    
+    .flex-center .card {
+        width: 50%;
+    }
+}
+
+.user-image-holder {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.users .user-photo {
+    width: 80px;
+    height: auto;
+}
+
+.user-image-holder img,
+.users .user-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+table.users.bordered > tbody > tr:last-child {
+    border: 0;
+}
+
+.notifications .badge {
+    border-radius: 2px;
+    background: #e91e63;
+    color: #fff;
+    font-weight: normal;
+    font-size: 0.9rem;
+    letter-spacing: .5px;
+}
+
+.notifications .date {
+    margin-left: 0;
+    font-size: 0.9em;
+    color: #757575;
+}
+
+.collection .collection-item {
+    padding: 20px;
+}
+
+#info {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #424242;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+}
