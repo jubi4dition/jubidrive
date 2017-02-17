@@ -36,7 +36,7 @@ class User extends Authenticatable
         $usersAll = self::all()->except(\Auth::id());
         
         foreach ($usersAll as $user) {
-            $users[$user->id] = $user->fullname; 
+            $users[$user->id] = $user->fullname;
         }
         
         return $users;
@@ -48,7 +48,7 @@ class User extends Authenticatable
     public function photoURL()
     {
         if ($this->photo === null) {
-            $photo =  asset('storage/userphotos/user_photo.png');
+            $photo =  asset('img/user_photo.png');
         } else {
             $photo =  asset('storage/userphotos/'.$this->photo);
         }
