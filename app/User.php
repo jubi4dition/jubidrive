@@ -28,7 +28,7 @@ class User extends Authenticatable
     ];
     
     /**
-     * Get the owner associated with the file.
+     * Get all users except this one for creating a selectbox.
      */
     public static function getAllforSelectbox()
     {
@@ -43,14 +43,14 @@ class User extends Authenticatable
     }
     
     /**
-     * Get the owner associated with the file.
+     * Get the photo for this user.
      */
     public function photoURL()
     {
         if ($this->photo === null) {
-            $photo =  asset('img/user_photo.png');
+            $photo = asset('img/user_photo.png');
         } else {
-            $photo =  asset('storage/userphotos/'.$this->photo);
+            $photo = asset('storage/userphotos/'.$this->photo);
         }
         
         return $photo;
