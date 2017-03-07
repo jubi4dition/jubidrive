@@ -30,9 +30,11 @@ class FileShares extends Model
     public $timestamps = false;
     
     /**
-     * Get the owner associated with the file.
+     * Get the users for who the file is shared.
+     * 
+     * return array
      */
-    public static function usersfromFile($fileID) 
+    public static function usersFromFile($fileID) 
     {
         $shares = self::where('file_id', $fileID)->get();
         
@@ -46,7 +48,7 @@ class FileShares extends Model
     }
     
     /**
-     * Get the owner associated with the file.
+     * The user which belongs to the file share.
      */
     public function user()
     {
