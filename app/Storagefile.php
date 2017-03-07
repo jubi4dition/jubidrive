@@ -30,7 +30,9 @@ class Storagefile extends Model
     ];
     
     /**
-     * Get the owner associated with the file.
+     * Get the formatted file size.
+     * 
+     * @return string
      */
     public function getSizeFormattedAttribute()
     {
@@ -40,6 +42,11 @@ class Storagefile extends Model
         return round(pow(1024, $base - floor($base)), 2) .' '. $suffixes[floor($base)];
     }
     
+    /**
+     * Determine if the user has access to the file.
+     * 
+     * @return bool
+     */
     public function hasAccess($userID) 
     {
         if ($this->user_id !== $userID && FileShares::where('file_id', $this->id)->where('user_id', $userID)->get()->isEmpty()) {
@@ -49,6 +56,11 @@ class Storagefile extends Model
         return true;
     }
     
+    /**
+     * Determine if the user is the owner of the file.
+     * 
+     * @return bool
+     */
     public function isOwner($userID = null)
     {
         if ($this->user_id === $userID) {
@@ -59,7 +71,7 @@ class Storagefile extends Model
     }
     
     /**
-     * Get the owner associated with the file.
+     * The user that owns the file.
      */
     public function owner()
     {
@@ -67,7 +79,7 @@ class Storagefile extends Model
     }
     
     /**
-     * Get the owner associated with the file.
+     * The users that have access to the file.
      */
     public function sharedWith()
     {
