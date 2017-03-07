@@ -29,6 +29,8 @@ class User extends Authenticatable
     
     /**
      * Get all users except this one for creating a selectbox.
+     * 
+     * @return array
      */
     public static function getAllforSelectbox()
     {
@@ -44,6 +46,8 @@ class User extends Authenticatable
     
     /**
      * Get the photo for this user.
+     * 
+     * @return string
      */
     public function photoURL()
     {
