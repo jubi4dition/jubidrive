@@ -29,13 +29,16 @@ class Notification extends Model
      */
     protected $dates = ['created_at', 'updated_at'];
     
+    /**
+     * All types for a notification.
+     */
     const TYPE_NEW = 1;
     const TYPE_DELETE = 2;
     const TYPE_RESTORE = 3;
     const TYPE_SHARE = 4;
     
     /**
-     * Indicates if the model should be timestamped.
+     * Get the text for the notification.
      *
      * @return string
      */
@@ -55,7 +58,7 @@ class Notification extends Model
     }
     
     /**
-     * Indicates if the model should be timestamped.
+     * Get the badge for the notification.
      *
      * @return string
      */
